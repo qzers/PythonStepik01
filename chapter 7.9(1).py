@@ -14,4 +14,4 @@ while 9 < n:
     #n += number
 
 
-print(n+totalled)
+print(n)
