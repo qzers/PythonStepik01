@@ -26,10 +26,15 @@ excPSWRD = input('Исключать ли неоднозначные симво�
 if digPSWRD.lower() == 'y':
     chars += digits
 if ABCpswrd.lower() == 'y':
-    chars += ABCpswrd
+    chars += lowercase_letters
 if abcPSWRD.lower() == 'y':
-    chars += abcPSWRD
+    chars += uppercase_letters
 if chPSWRD.lower() == 'y':
-    chars += chPSWRD
+    chars += punctuation
+if excPSWRD.lower() == 'y':
+    for c in 'il1Lo0O':
+        chars = chars.replace(c, '')
+print(chars)
 for _ in range(int(totalPSWRD)):
     print(generate_password(int(lenPSWRD), chars))
+
